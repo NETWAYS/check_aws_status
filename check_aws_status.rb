@@ -86,6 +86,11 @@ Choice.options do
     default 'ec2'
   end
 
+  option :proxy_server do
+    short '-ps'
+    long '--proxy_server=PROXY_SERVER'
+    desc 'Proxy Server if needed to connect to EC2 (e.g. http://192.168.0.5:3456 no default)'
+  end
 
   separator ''
   separator 'Common options: '
@@ -99,6 +104,7 @@ Choice.options do
     long '--examples'
     desc 'S3 Status in Ireland (eu-west-1 region): ./check_aws_status.rb -s s3 -r eu-west-1'
     desc 'EC2 Status in North California (us-west-1 region): ./check_aws_status.rb -s ec2 -r us-west-1'
+    desc 'S3 Status in Ireland (eu-west-1 region) using a proxy: ./check_aws_status.rb -s s3 -r eu-west-1 -ps http://10.0.0.6:9000'
   end
 
   option :version do
@@ -110,6 +116,10 @@ Choice.options do
       exit
     end
   end
+end
+
+unless Choice[:proxy_server].nil?
+  ENV['http_proxy'] = Choice[:proxy_server]
 end
 
 #build RSS Feed URL

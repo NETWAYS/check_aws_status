@@ -2,7 +2,6 @@
 Monitor the RSS feed on the AWS status Page
 
 ##Dependecies
-###Gems
 * Ruby 
 * Gems
 	* choice 	

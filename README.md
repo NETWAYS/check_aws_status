@@ -1,14 +1,16 @@
 # check_aws_status
+
 Monitor the RSS feed on the AWS status Page
 
-##Dependecies
+## Dependecies
+
 * Ruby 
 * Gems
-	* choice 	
+  * choice 	
 
 `gem install choice`
 
-##Usage
+## Usage
 
 	name: check_aws_status.rb
 	Usage: check_aws_status.rb [-purspsv]

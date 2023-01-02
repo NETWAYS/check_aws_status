@@ -1,12 +1,14 @@
+This Plugin is DEPRECATED - See https://github.com/NETWAYS/check_cloud_aws
+
 # check_aws_status
 
 Monitor the RSS feed on the AWS status Page
 
 ## Dependecies
 
-* Ruby 
+* Ruby
 * Gems
-  * choice 	
+  * choice
 
 `gem install choice`
 
